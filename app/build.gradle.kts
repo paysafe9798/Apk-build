@@ -17,12 +17,6 @@ android {
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
         }
-        python {
-            buildPython("python3")
-            pip {
-                // no external pip deps needed; engine.py uses only stdlib
-            }
-        }
     }
 
     buildTypes {
@@ -39,6 +33,12 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        buildPython("python3")
     }
 }
 
