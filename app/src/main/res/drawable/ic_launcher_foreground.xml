@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Crosshair ring -->
+    <path
+        android:strokeColor="#F2B705"
+        android:strokeWidth="4"
+        android:pathData="M54,30 a24,24 0 1,0 0.1,0" />
+    <!-- Crosshair ticks -->
+    <path
+        android:strokeColor="#F2B705"
+        android:strokeWidth="4"
+        android:pathData="M54,18 L54,28 M54,80 L54,90 M18,54 L28,54 M80,54 L90,54" />
+    <!-- Center dot -->
+    <path
+        android:fillColor="#3DA9FC"
+        android:pathData="M54,50 a4,4 0 1,0 0.1,0" />
+</vector>
