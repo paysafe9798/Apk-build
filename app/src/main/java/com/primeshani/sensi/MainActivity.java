@@ -1,5 +1,7 @@
 package com.primeshani.sensi;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tvDeviceName, tvTier, tvPower, tvResult;
     private ProgressBar progressBar;
-    private Button btnGenerate;
+    private Button btnGenerate, btnTiktok;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
         tvResult = findViewById(R.id.tvResult);
         progressBar = findViewById(R.id.progressBar);
         btnGenerate = findViewById(R.id.btnGenerate);
+        btnTiktok = findViewById(R.id.btnTiktok);
 
         btnGenerate.setOnClickListener(v -> generateSensitivity());
+        btnTiktok.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.tiktok.com/@prime_shani?_r=1&_t=ZS-97Y8jW9OOpt"))));
 
         // Auto-run once on launch so results are ready immediately
         generateSensitivity();
